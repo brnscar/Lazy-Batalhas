@@ -5,6 +5,6 @@
 <web-app>
 	<display-name>Lazy-Batalhas</display-name>
 	<welcome-file-list>
-		<welcome-file>site/index.html</welcome-file>
+		<welcome-file>/site/index.html</welcome-file>
 	</welcome-file-list>
 </web-app>
