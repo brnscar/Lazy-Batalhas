@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:composition >
+
+		<h:form>
+			
+			<div class="main-header">
+			<div class="logo-header">
+				<a href="index.html" class="logo">
+					Lazy Battle Rhyme
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+			</div>
+			<nav class="navbar navbar-header navbar-expand-lg">
+				<div class="container-fluid">
+					
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="la la-envelope"></i>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="la la-bell"></i>
+								<span class="notification">3</span>
+							</a>
+							
+						</li>
+					</ul>	
+						
+					</div>
+				</nav>
+			</div>
+
+			<!--menu lateral -->
+			<div class="sidebar">
+				<div class="scrollbar-inner sidebar-wrapper">
+					<div class="user">
+						<div class="photo">
+							<img src="#{request.contextPath}/resources/admin/img/bru2.jpg" />
+						</div>
+						<div class="info">
+							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+								<span>
+									Bruno de Jesus
+									<span class="user-level">Administrador</span>
+									<span class="caret"></span>
+								</span>
+							</a>
+							<div class="clearfix"></div>
+
+							<div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+								<ul class="nav">
+									<li>
+										<h:link value="Meu Perfil" outcome="/admin/user/form" />
+									</li>
+									<li>
+										<a href="#edit">
+											<span class="link-collapse">Editar Perfil</span>
+										</a>
+									</li>
+									<li>
+										<a href="#settings">
+											<span class="link-collapse">Configurações</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="nav">
+						<li class="nav-item active">
+							<a href="index.html">
+								<i class="la la-dashboard"></i>
+								<p>Painel de Controle</p>
+								<span class="badge badge-count">5</span>
+							</a>
+						</li>
+						
+						<li class="nav-item">
+							<a href="index.html">
+								<i class="la la-file-video-o"></i>
+								<p>Meus Ví­deos</p>
+								<span class="badge badge-success">50</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="index.html">
+								<i class="la la-video-camera"></i>
+								<p>Transmissões</p>
+								<span class="badge badge-danger">6</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="login.html">
+								<i class="la la la-user"></i>
+								<p>login</p>
+								
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			
+			
+	      </h:form>
+		
+
+</ui:composition>
+</html>

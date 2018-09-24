@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:composition template="/templates/_admin_template.xhtml">
+
+	<ui:param name="local" value="Cadastro de Produtos" />
+
+	<ui:define name="body">
+	
+		   <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                         <h2>Cadastro de Produtos <p class="lead">admin/produtos/form</p></h2>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            
+            <h:messages globalOnly="true" errorClass="errorMessage"/>
+            
+            <h:form enctype="multipart/form-data" class="form-horizontal">
+            
+	            <div class="form-group">
+				  <h:outputLabel value="Nome" for="nome"  class="col-sm-12"/>
+				  <div class="col-sm-6">
+				  	<h:inputText value="#{produtoBean.produto.nome}" required="true"
+						id="nome" styleClass="form-control"/>
+					<h:message for="nome" errorClass="errorMessage"/>
+				  </div>
+				</div>
+				
+				<div class="form-group">
+				 <h:outputLabel value="Descrição" for="descricao"  class="col-sm-12"/>
+				  <div class="col-sm-6">
+				  	<h:inputTextarea rows="4" cols="20" required="true"
+						value="#{produtoBean.produto.descricao}" id="descricao"
+						styleClass="form-control" />
+					<h:message for="descricao" errorClass="errorMessage"/>
+				  </div>
+				</div>
+				
+				<div class="form-group">
+				  <div class="col-sm-3">
+				  	<h:outputLabel value="Preço" for="preco" />
+				  	<h:inputText value="#{produtoBean.produto.preco}" required="true"
+						id="preco" styleClass="form-control" />
+					<h:message for="preco" errorClass="errorMessage"/>
+				  </div>
+				  <div class="col-sm-3">
+				  	<h:outputLabel value="Preço Promocional" for="precoPromocional" />
+					<h:inputText value="#{produtoBean.produto.precoPromocional}" required="true"
+						id="precoPromocional" styleClass="form-control" />
+					<h:message for="precoPromocional" errorClass="errorMessage"/>
+				  </div>
+				</div>
+				
+				<div class="form-group">
+					  <h:outputLabel value="Categorias" for="categorias" class="col-sm-12" />
+					  <div class="col-sm-6">
+					  	<h:selectManyListbox value="#{produtoBean.produto.categorias}"
+							converter="categoriaConverter" id="categorias" styleClass="form-control">
+							<f:selectItems value="#{produtoBean.categorias}" var="categoria"
+								itemValue="#{categoria}" itemLabel="#{categoria.descricao}" />
+						</h:selectManyListbox>
+						<h:message for="categorias" errorClass="errorMessage"/>
+					  
+					  </div>
+					</div>
+					
+					<div class="form-group">
+					  <div class="col-sm-4">
+					  <h:outputLabel value="Imagem do Livro" />
+					  	<h:inputFile value="#{produtoBean.imagemPath}" id="imagemPath"
+							styleClass="form-control" />
+					  </div>
+					</div>
+				
+				<div class="col-sm-6">
+					<h:commandButton value="Cadastrar" action="#{produtoBean.salvar}"
+					styleClass="btn btn-info pull-right" />
+				</div>
+					
+			</h:form>
+			 <hr/>
+		
+	</ui:define>
+
+</ui:composition>
+</html>
