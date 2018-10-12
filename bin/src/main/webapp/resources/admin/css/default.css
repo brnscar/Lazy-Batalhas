@@ -1,0 +1,40 @@
+.main-login {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  float: right;
+  background: #f2f3f8;
+
+
+}
+
+.main-login .content {
+  padding: 30px 15px;
+  min-height: calc(100% - 123px);
+  margin-top: 55px;
+  
+}
+
+.nav_open .main-login, .nav_open .main-header {
+    -webkit-transform: translate3d(260px, 0, 0);
+    -moz-transform: translate3d(260px, 0, 0);
+    -o-transform: translate3d(260px, 0, 0);
+    -ms-transform: translate3d(260px, 0, 0);
+    transform: translate3d(260px, 0, 0) !important;
+  }
+
+.main-login {
+    width: 100%;
+    transition: all .5s;
+  }
+.main-login .content {
+    padding: 30px 10px;
+  }
+
+  .topbar_open .main-login {
+    transform: translate3d(0, 125px, 0) !important;
+  }
+
+  .nav_open.topbar_open .main-login {
+    transform: translate3d(260px, 125px, 0) !important;
+  }

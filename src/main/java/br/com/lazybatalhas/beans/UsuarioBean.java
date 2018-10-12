@@ -3,14 +3,11 @@ package br.com.lazybatalhas.beans;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-<<<<<<< HEAD
-=======
-import javax.inject.Inject;
->>>>>>> a496b60c6128f256c03084c408072f680998a2ad
 import javax.inject.Named;
 import javax.transaction.Transactional;
 
 import br.com.lazybatalhas.models.Usuario;
+
 
 @Named
 @RequestScoped
@@ -30,7 +27,6 @@ public class UsuarioBean {
 		//context.getExternalContext().getFlash().setKeepMessages(true);
 		//context.addMessage(null, new FacesMessage("Usuario incluido com sucesso!"));
 		
-<<<<<<< HEAD
 		return "/admin/user/form?faces-redirect=true";
 	}
 
@@ -44,9 +40,6 @@ public class UsuarioBean {
 		//context.addMessage(null, new FacesMessage("Usuario incluido com sucesso!"));
 		
 		return "/admin/index?faces-redirect=true";
-=======
-		return "/admin/user/lista?faces-redirect=true";
->>>>>>> a496b60c6128f256c03084c408072f680998a2ad
 	}
 	
 	
