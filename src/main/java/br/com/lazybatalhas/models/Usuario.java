@@ -10,7 +10,7 @@ public class Usuario {
 	@NotBlank
 	private String sobreNome;
 	
-	 
+	private Login login = new Login();
 	
 	
 	public String getNome() {
@@ -25,6 +25,14 @@ public class Usuario {
 	}
 	public void setSobreNome(String sobreNome) {
 		this.sobreNome = sobreNome;
+	}
+	
+	
+	public Login getLogin() {
+		return login;
+	}
+	public void setLogin(Login login) {
+		this.login = login;
 	}
 	
 	
