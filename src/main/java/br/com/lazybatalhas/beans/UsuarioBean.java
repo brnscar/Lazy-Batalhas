@@ -3,11 +3,11 @@ package br.com.lazybatalhas.beans;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
 import javax.inject.Named;
 import javax.transaction.Transactional;
 
 import br.com.lazybatalhas.models.Usuario;
+
 
 @Named
 @RequestScoped
@@ -27,7 +27,19 @@ public class UsuarioBean {
 		//context.getExternalContext().getFlash().setKeepMessages(true);
 		//context.addMessage(null, new FacesMessage("Usuario incluido com sucesso!"));
 		
-		return "/admin/user/lista?faces-redirect=true";
+		return "/admin/user/form?faces-redirect=true";
+	}
+
+	@Transactional
+	public String cadastrar() {
+		
+		System.out.println(user.getLogin().getEmail());
+		System.out.println(user.getLogin().getSenha());
+		
+		//context.getExternalContext().getFlash().setKeepMessages(true);
+		//context.addMessage(null, new FacesMessage("Usuario incluido com sucesso!"));
+		
+		return "/admin/index?faces-redirect=true";
 	}
 	
 	
