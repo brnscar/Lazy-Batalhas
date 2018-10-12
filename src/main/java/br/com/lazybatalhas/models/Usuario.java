@@ -10,7 +10,11 @@ public class Usuario {
 	@NotBlank
 	private String sobreNome;
 	
+<<<<<<< HEAD
 	private Login login = new Login();
+=======
+	 
+>>>>>>> a496b60c6128f256c03084c408072f680998a2ad
 	
 	
 	public String getNome() {
@@ -28,6 +32,7 @@ public class Usuario {
 	}
 	
 	
+<<<<<<< HEAD
 	public Login getLogin() {
 		return login;
 	}
@@ -36,5 +41,7 @@ public class Usuario {
 	}
 	
 	
+=======
+>>>>>>> a496b60c6128f256c03084c408072f680998a2ad
 
 }
